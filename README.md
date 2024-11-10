@@ -10,6 +10,7 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
 
 Directory Structure for the repo:
+```
 
 ├───meta-arguments-examples
 │   ├───count-example
@@ -19,3 +20,5 @@ Directory Structure for the repo:
     ├───custom-condition-check-example
     ├───lifecycle-provisoner-example
     └───lifecycle-resources-state-example
+
+```
