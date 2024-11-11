@@ -10,6 +10,8 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
     Variables & Outputs Examples: Understand how to work with Terraform variables and outputs to make our infrastructure configurations flexible, reusable, and manageable.
 
+    Data Sources Examples: To retrieve data from external systems or cloud providers using Terraform data sources. These examples demonstrate how to query information about existing resources or configurations that are useful for dynamic infrastructure setups.
+
 
 Directory & File Structure for the repo:
 
