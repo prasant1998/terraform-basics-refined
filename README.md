@@ -8,17 +8,85 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
     Resource Blocks Examples: Demonstrates advanced control over resource states with examples for custom condition checks, lifecycle management, and provisioning strategies. 
 
+    Variables & Outputs Examples: Understand how to work with Terraform variables and outputs to make our infrastructure configurations flexible, reusable, and manageable.
 
-Directory Structure for the repo:
+
+Directory & File Structure for the repo:
+
+
 ```
 
+
+│   README.md
+│
+├───data-sources-example
+│       main.tf
+│       provider.tf
+│       readme.md
+│
+├───local-value-example
+│       main.tf
+│       provider.tf
+│       readme.md
+│
 ├───meta-arguments-examples
 │   ├───count-example
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
 │   ├───depends-on_example
-│   └───for_each
-└───resource-blocks-examples
-    ├───custom-condition-check-example
-    ├───lifecycle-provisoner-example
-    └───lifecycle-resources-state-example
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   ├───for_each
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   └───lifecycle-example
+│           image.png
+│           main.tf
+│           provider.tf
+│           readme.md
+│
+├───resource-blocks-examples
+│   ├───custom-condition-check-example
+│   │       image.png
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   ├───lifecycle-provisoner-example
+│   │       image.png
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   └───lifecycle-resources-state-example
+│           00-provider.tf
+│           01-remove-resource-from-state-file.tf
+│           image.png
+│           readme.md
+│
+└───variables&outputs-examples
+    ├───input-variables-examples
+    │       main.tf
+    │       provider.tf
+    │       readme.md
+    │
+    └───output-value-example
+        │   main.tf
+        │   provider.tf
+        │   readme.md
+        │
+        └───module-output-example
+            │   main.tf
+            │   provider.tf
+            │   readme.md
+            │
+            └───compute
+                    ec2_instance.tf
 
 ```
