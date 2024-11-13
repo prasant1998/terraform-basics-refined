@@ -14,6 +14,8 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
     Modules Examples: Dive into Terraform Modules, which allow us to group resources and reuse configurations across different parts of our infrastructure. These examples showcase how to structure and call modules, making our infrastructure modular, scalable, and easy to maintain.
 
+    Additionally, I have added function examples to which I have done try function and lookup function.
+
 
 Directory & File Structure for the repo:
 
@@ -21,11 +23,27 @@ Directory & File Structure for the repo:
 ```
 
 │   README.md
-│
+│   
 ├───data-sources-example
 │       main.tf
 │       provider.tf
 │       readme.md
+│
+├───functions-examples
+│   ├───lookup-function-example
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   └───try-function-examples
+│       │   main.tf
+│       │   provider.tf
+│       │   readme.md
+│       │
+│       └───vpc-module
+│               main.tf
+│               outputs.tf
+│               variables.tf
 │
 ├───local-value-example
 │       main.tf
@@ -75,7 +93,7 @@ Directory & File Structure for the repo:
 │   │           outputs.tf
 │   │           variables.tf
 │   │
-│   └───vpc-module-example-reveised
+│   └───vpc-module-example-revised
 │       │   main.tf
 │       │   provider.tf
 │       │   readme.md
@@ -126,85 +144,5 @@ Directory & File Structure for the repo:
                     ec2_instance.tf
 
 
-
-
-
-
-
-
-
-
-
-│   README.md
-│
-├───data-sources-example
-│       main.tf
-│       provider.tf
-│       readme.md
-│
-├───local-value-example
-│       main.tf
-│       provider.tf
-│       readme.md
-│
-├───meta-arguments-examples
-│   ├───count-example
-│   │       main.tf
-│   │       provider.tf
-│   │       readme.md
-│   │
-│   ├───depends-on_example
-│   │       main.tf
-│   │       provider.tf
-│   │       readme.md
-│   │
-│   ├───for_each
-│   │       main.tf
-│   │       provider.tf
-│   │       readme.md
-│   │
-│   └───lifecycle-example
-│           image.png
-│           main.tf
-│           provider.tf
-│           readme.md
-│
-├───resource-blocks-examples
-│   ├───custom-condition-check-example
-│   │       image.png
-│   │       main.tf
-│   │       provider.tf
-│   │       readme.md
-│   │
-│   ├───lifecycle-provisoner-example
-│   │       image.png
-│   │       main.tf
-│   │       provider.tf
-│   │       readme.md
-│   │
-│   └───lifecycle-resources-state-example
-│           00-provider.tf
-│           01-remove-resource-from-state-file.tf
-│           image.png
-│           readme.md
-│
-└───variables&outputs-examples
-    ├───input-variables-examples
-    │       main.tf
-    │       provider.tf
-    │       readme.md
-    │
-    └───output-value-example
-        │   main.tf
-        │   provider.tf
-        │   readme.md
-        │
-        └───module-output-example
-            │   main.tf
-            │   provider.tf
-            │   readme.md
-            │
-            └───compute
-                    ec2_instance.tf
 
 ```
