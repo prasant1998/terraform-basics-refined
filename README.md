@@ -16,6 +16,8 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
     Additionally, I have added function examples to which I have done try function and lookup function.
 
+    I have also updated examples for dynamic blocks, which include examples related to security groups.
+
 
 Directory & File Structure for the repo:
 
@@ -23,8 +25,13 @@ Directory & File Structure for the repo:
 ```
 
 │   README.md
-│   
+│
 ├───data-sources-example
+│       main.tf
+│       provider.tf
+│       readme.md
+│
+├───dynamic-block-examples
 │       main.tf
 │       provider.tf
 │       readme.md
@@ -111,7 +118,7 @@ Directory & File Structure for the repo:
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
-│   │
+│   │       
 │   ├───lifecycle-provisoner-example
 │   │       image.png
 │   │       main.tf
@@ -142,7 +149,6 @@ Directory & File Structure for the repo:
             │
             └───compute
                     ec2_instance.tf
-
 
 
 ```
