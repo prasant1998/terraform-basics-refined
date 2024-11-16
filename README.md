@@ -26,6 +26,11 @@ Directory & File Structure for the repo:
 
 │   README.md
 │
+├───conditional-examples
+│       main.tf
+│       provider.tf
+│       readme.md
+│
 ├───data-sources-example
 │       main.tf
 │       provider.tf
@@ -51,6 +56,33 @@ Directory & File Structure for the repo:
 │               main.tf
 │               outputs.tf
 │               variables.tf
+│
+├───integrating-modules-examples
+│   ├───vpc-module-ec2-module-securtiy-group-module
+│   │   │   main.tf
+│   │   │   outputs.tf
+│   │   │   provider.tf
+│   │   │   readme.md
+│   │   │   terraform.tfvars
+│   │   │   variables.tf
+│   │   │
+│   │   └───modules
+│   │       └───security_group
+│   │               main.tf
+│   │               outputs.tf
+│   │               variables.tf
+│   │
+│   └───vpc-module-integrating-ec2-module
+│       │   main.tf
+│       │   outputs.tf
+│       │   provider.tf
+│       │   readme.md
+│       │
+│       └───modules
+│           └───ec2-instance
+│                   main.tf
+│                   outputs.tf
+│                   variables.tf
 │
 ├───local-value-example
 │       main.tf
@@ -118,7 +150,7 @@ Directory & File Structure for the repo:
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
-│   │       
+│   │
 │   ├───lifecycle-provisoner-example
 │   │       image.png
 │   │       main.tf
