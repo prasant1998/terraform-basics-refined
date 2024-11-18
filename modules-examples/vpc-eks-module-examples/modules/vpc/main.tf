@@ -19,7 +19,7 @@ resource "aws_subnet" "subnet-pub" {
     map_public_ip_on_launch = true
     tags = merge(
       var.vpc_config.tags, 
-      { "Name" = each.value.subnet_name }
+      { "Name" = each.key }
     )
   
 }
@@ -33,7 +33,7 @@ resource "aws_subnet" "subnet-private" {
     availability_zone = var.vpc_config.availability_zones[each.key == "private-subnet-1" ? 0 : 1]  # First AZ for the first private subnet, second AZ for the second private subnet
     tags = merge(
       var.vpc_config.tags, 
-      {"Name" = each.value.subnet_name}
+      {"Name" = each.key }
     )
   
 }

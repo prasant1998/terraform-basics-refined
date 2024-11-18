@@ -1,17 +1,7 @@
-variable "vpc_config" {
-  description = "Configuration for the AWS VPC and associated resources"
-  type = object({
-    cidr_block = string
-    availability_zones = list(string)
-    subnets = list(object({
-      subnet_name = string
-      subnet_cidr = string
-      subnet_type = string 
-    })) 
-    tags = map(string)
-  })
-  default = {
-    cidr_block = "173.10.0.0/16"
+### VPC Variables Values
+
+vpc_config = {
+  cidr_block = "173.10.0.0/16"
     availability_zones = [ "ap-northeast-2a", "ap-northeast-2c" ]
     subnets = [ {
       subnet_name = "public-subnet-1"
@@ -39,11 +29,35 @@ variable "vpc_config" {
       "kubernetes.io/role/internal-elb" = 1
       "env"  =  "dev"
     }
-  }
 }
 
-variable "env" {
-  description = "Enviornment for the Infrastructure"
-  type = string
-  
+
+## EKS Variable Values
+
+tags = {
+  "Name" = "Dev_Infra"
+  "Env"  =  "dev"
+  "Owner" =  "DevOps"
 }
+
+eks_iam_role_name = "eks-dev-cluster-iam-role"
+eks_cluster_name = "eks-dev-cluster"
+k8s_version = "1.30"
+
+
+# Node Group Variable Values
+
+
+node_group_name = "test-node-group"
+node_group_role_name = "test-node-group-role"
+launch_template_name_prefix = "test-node-group-launch-template"
+node_instance_type = "t2.micro"
+node_volume_size = 10
+node_volume_type = "gp3"
+required_nodes = 2
+max_nodes = 3
+min_nodes = 1
+capacity_type = "ON_DEMAND"
+ami_type = "AL2_x86_64"
+env = "dev"
+

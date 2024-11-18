@@ -94,7 +94,10 @@ resource "aws_eks_node_group" "eks_node_group" {
     force_update_version = false
     ami_type = var.ami_type
 
-    tags = var.tags
+    tags = merge(
+        var.tags, 
+        {"Name" = "test-node-group"}
+    ) 
 
     labels = {
       role = "eks-nodes"

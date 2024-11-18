@@ -1,4 +1,4 @@
-# terraform-basics-refined
+# Terraform-basics-refined
 Enhanced Terraform basics with practical examples and best practices to streamline infrastructure provisioning.
 
 
@@ -19,7 +19,7 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
     I have also updated examples for dynamic blocks, which include examples related to security groups.
 
 
-Directory & File Structure for the repo:
+# Directory & File Structure for the repo:
 
 
 ```
@@ -121,6 +121,30 @@ Directory & File Structure for the repo:
 │   │           main.tf
 │   │           outputs.tf
 │   │           variables.tf
+│   │
+│   ├───vpc-eks-module-examples
+│   │   │   main.tf
+│   │   │   outputs.tf
+│   │   │   provider.tf
+│   │   │   readme.md
+│   │   │   terraform.tfvars
+│   │   │   variables.tf
+│   │   │
+│   │   └───modules
+│   │       ├───eks
+│   │       │       main.tf
+│   │       │       outputs.tf
+│   │       │       variables.tf
+│   │       │
+│   │       ├───eks-node-group
+│   │       │       main.tf
+│   │       │       outputs.tf
+│   │       │       variables.tf
+│   │       │
+│   │       └───vpc
+│   │               main.tf
+│   │               outputs.tf
+│   │               variables.tf
 │   │
 │   ├───vpc-module-example
 │   │   │   main.tf
