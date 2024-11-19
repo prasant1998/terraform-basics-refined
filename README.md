@@ -41,8 +41,23 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 │       provider.tf
 │       readme.md
 │
+├───for-examples
+│       main.tf
+│       provider.tf
+│       readme.md
+│
 ├───functions-examples
+│   ├───flatten-examples
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
 │   ├───lookup-function-example
+│   │       main.tf
+│   │       provider.tf
+│   │       readme.md
+│   │
+│   ├───toset-examples
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
