@@ -138,6 +138,7 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 │   │           variables.tf
 │   │
 │   ├───vpc-eks-module-examples
+│   │   │   kubernetes-deployment.tf
 │   │   │   main.tf
 │   │   │   outputs.tf
 │   │   │   provider.tf

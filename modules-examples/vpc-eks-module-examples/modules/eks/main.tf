@@ -69,3 +69,7 @@ resource "aws_eks_cluster" "eks-cluster" {
     depends_on = [ aws_iam_role_policy_attachment.eks_cluster_policy ]
   
 }
+
+data "aws_eks_cluster_auth" "eks-cluster" {  # Changed name to match your reference
+  name = aws_eks_cluster.eks-cluster.name
+}

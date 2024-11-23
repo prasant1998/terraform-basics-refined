@@ -6,6 +6,7 @@ This project provides Terraform modules to deploy an **Amazon Elastic Kubernetes
 
 ```plaintext
 │   main.tf
+│   kubernetes-deployment.tf
 │   provider.tf
 │   readme.md
 │   terraform.tfvars
@@ -116,6 +117,31 @@ min_nodes = 1
 capacity_type = "ON_DEMAND"
 ami_type = "AL2_x86_64"
 ```
+
+# Kubernetes Deployment with Terraform
+
+This Terraform configuration creates a basic Kubernetes deployment with an NGINX web server and exposes it through a LoadBalancer service.
+
+## Components
+
+### 1. Kubernetes Deployment
+- Creates a deployment named `test-deployment`
+- Runs 2 replicas of NGINX (version 1.21.6)
+- Includes resource limits and requests for CPU and memory
+- Exposes port 80
+
+### 2. Kubernetes Service
+- Creates a LoadBalancer service named `test-service`
+- Routes traffic to the NGINX pods
+- Exposes the application on port 80
+
+## Resource Specifications
+
+### Deployment Resources
+- CPU Limits: 0.5 cores
+- Memory Limits: 512Mi
+- CPU Requests: 250m
+- Memory Requests: 256Mi
 
 ### **4. Initialize Terraform**
 Run the following command to initialize the working directory:

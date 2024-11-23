@@ -12,3 +12,13 @@ output "eks_cluster_endpoint" {
   
 }
 
+output "eks_cluster_certificate_authority_data" {
+    value = module.eks_cluster.cluster_certificate_authority_data  
+}
+
+output "eks_cluster_token" {
+    value = module.eks_cluster.cluster_token
+    sensitive = true
+}
+
+
