@@ -32,6 +32,20 @@ vpc_config = {
 }
 
 
+private_subnet_tags = {
+  "Name" = "private-subnet"
+  "kubernetes.io/cluster/eks-dev-cluster" = "shared"
+  "kubernetes.io/role/internal-elb" = 1
+  "Env"  =  "dev"
+}
+
+public_subnet_tags = {
+  "Name" = "public-subnet"
+  "kubernetes.io/cluster/eks-dev-cluster" = "shared"
+  "kubernetes.io/role/internal-elb" = 1
+  "Env"  =  "dev"
+}
+
 ## EKS Variable Values
 
 tags = {

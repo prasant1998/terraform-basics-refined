@@ -2,7 +2,8 @@ module "vpc" {
     source = "./modules/vpc"
     env = var.env
     vpc_config = var.vpc_config
-  
+    private_subnet_tags = var.private_subnet_tags
+    public_subnet_tags = var.public_subnet_tags
 }
 
 
