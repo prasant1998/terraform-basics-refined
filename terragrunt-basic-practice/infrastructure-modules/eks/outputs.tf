@@ -9,6 +9,9 @@ output "eks_cluster_name" {
   
 }
 
+output "eks_oidc_provider_arn" {
+  value = aws_iam_openid_connect_provider.eks_oidc_provider[0].arn
+}
 
 output "cluster_endpoint" {
   value = aws_eks_cluster.eks-cluster.endpoint

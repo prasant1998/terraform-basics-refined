@@ -1,22 +1,9 @@
 # Terraform-basics-refined
-Enhanced Terraform basics with practical examples and best practices to streamline infrastructure provisioning.
+
+Enhanced Terraform basics with practical examples and best practices to streamline infrastructure provisioning. 
 
 
-This repository, terraform-basics-refined, is designed to deepen understanding of Terraform’s core concepts through practical examples and advanced usage techniques. It contains:
 
-    Meta-Arguments Examples: Includes examples for count, depends_on, and for_each, illustrating efficient resource management with conditional logic and dependencies.
-
-    Resource Blocks Examples: Demonstrates advanced control over resource states with examples for custom condition checks, lifecycle management, and provisioning strategies. 
-
-    Variables & Outputs Examples: Understand how to work with Terraform variables and outputs to make our infrastructure configurations flexible, reusable, and manageable.
-
-    Data Sources Examples: To retrieve data from external systems or cloud providers using Terraform data sources. These examples demonstrate how to query information about existing resources or configurations that are useful for dynamic infrastructure setups.
-
-    Modules Examples: Dive into Terraform Modules, which allow us to group resources and reuse configurations across different parts of our infrastructure. These examples showcase how to structure and call modules, making our infrastructure modular, scalable, and easy to maintain.
-
-    Additionally, I have added function examples to which I have done try function and lookup function.
-
-    I have also updated examples for dynamic blocks, which include examples related to security groups.
 
 
 # Directory & File Structure for the repo:
@@ -109,7 +96,7 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
-│   │
+│   │       
 │   ├───depends-on_example
 │   │       main.tf
 │   │       provider.tf
@@ -203,6 +190,71 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 │           image.png
 │           readme.md
 │
+├───terragrunt-basic-practice
+│   │   readme.md
+│   │   terragrunt.hcl
+│   │
+│   ├───dev
+│   │   └───vpc
+│   │           readme.md
+│   │           terragrunt.hcl
+│   │
+│   ├───infrastructure-modules
+│   │   ├───eks
+│   │   │       main.tf
+│   │   │       outputs.tf
+│   │   │       variables.tf
+│   │   │
+│   │   ├───eks-node-group
+│   │   │       main.tf
+│   │   │       outputs.tf
+│   │   │       variables.tf
+│   │   │
+│   │   └───vpc
+│   │           main.tf
+│   │           outputs.tf
+│   │           variables.tf
+│   │
+│   └───staging
+│       └───vpc
+│               readme.md
+│               terragrunt.hcl
+│
+├───terragrunt-modules-practice
+│   │   readme.md
+│   │   terragrunt.hcl
+│   │
+│   ├───dev
+│   │   │   env.hcl
+│   │   │
+│   │   ├───eks
+│   │   │       readme.md
+│   │   │       terragrunt.hcl
+│   │   │
+│   │   ├───nodegroup
+│   │   │       readme.md
+│   │   │       terragrunt.hcl
+│   │   │
+│   │   └───vpc
+│   │           readme.md
+│   │           terragrunt.hcl
+│   │
+│   └───infrastructure-modules
+│       ├───eks
+│       │       main.tf
+│       │       outputs.tf
+│       │       variables.tf
+│       │
+│       ├───eks-node-group
+│       │       main.tf
+│       │       outputs.tf
+│       │       variables.tf
+│       │
+│       └───vpc
+│               main.tf
+│               outputs.tf
+│               variables.tf
+│
 └───variables&outputs-examples
     ├───input-variables-examples
     │       main.tf
@@ -224,3 +276,22 @@ This repository, terraform-basics-refined, is designed to deepen understanding o
 
 
 ```
+
+
+## Terraform Basics Examples
+
+This repository, terraform-basics-refined, is designed to deepen understanding of Terraform’s core concepts through practical examples and advanced usage techniques. It contains:
+
+    Meta-Arguments Examples: Includes examples for count, depends_on, and for_each, illustrating efficient resource management with conditional logic and dependencies.
+
+    Resource Blocks Examples: Demonstrates advanced control over resource states with examples for custom condition checks, lifecycle management, and provisioning strategies. 
+
+    Variables & Outputs Examples: Understand how to work with Terraform variables and outputs to make our infrastructure configurations flexible, reusable, and manageable.
+
+    Data Sources Examples: To retrieve data from external systems or cloud providers using Terraform data sources. These examples demonstrate how to query information about existing resources or configurations that are useful for dynamic infrastructure setups.
+
+    Modules Examples: Dive into Terraform Modules, which allow us to group resources and reuse configurations across different parts of our infrastructure. These examples showcase how to structure and call modules, making our infrastructure modular, scalable, and easy to maintain.
+
+    Additionally, I have added function examples to which I have done try function and lookup function.
+
+    I have also updated examples for dynamic blocks, which include examples related to security groups.

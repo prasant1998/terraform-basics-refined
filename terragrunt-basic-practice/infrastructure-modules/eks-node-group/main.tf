@@ -90,6 +90,10 @@ resource "aws_eks_node_group" "eks_node_group" {
       min_size = var.min_nodes
     }
 
+    update_config {
+      max_unavailable = 1
+    }
+
     capacity_type = var.capacity_type
     force_update_version = false
     ami_type = var.ami_type
