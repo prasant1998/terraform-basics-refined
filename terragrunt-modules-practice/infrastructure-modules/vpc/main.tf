@@ -7,7 +7,9 @@ resource "aws_vpc" "module-vpc" {
     enable_dns_hostnames = true
     tags = merge(
       var.vpc_config.tags, 
-      {"Name" = var.env == "" ? var.vpc_config.name : "eks-${var.env}-vpc"}
+      {"Name" = var.env == "" ? var.vpc_config.name : "eks-${var.env}-vpc"},
+      {"kubernetes.io/cluster/eks-${var.env}-cluster" = "shared"},
+      {"Env" = var.env}
     )
   
 }
@@ -22,7 +24,9 @@ resource "aws_subnet" "subnet-pub" {
     map_public_ip_on_launch = true
     tags = merge(
       var.public_subnet_tags,
-      { "Name" = var.env == "" ? each.key : "eks-${var.env}-${each.key}" }
+      { "Name" = var.env == "" ? each.key : "eks-${var.env}-${each.key}" },
+      {"kubernetes.io/cluster/eks-${var.env}-cluster" = "shared"},
+      {"Env" = var.env}
     )
   
 }
@@ -36,7 +40,9 @@ resource "aws_subnet" "subnet-private" {
     availability_zone = var.vpc_config.availability_zones[each.key == "private-subnet-1" ? 0 : 1]  # First AZ for the first private subnet, second AZ for the second private subnet
     tags = merge(
       var.private_subnet_tags,
-      { "Name" = var.env == "" ? each.key : "eks-${var.env}-${each.key}" }
+      { "Name" = var.env == "" ? each.key : "eks-${var.env}-${each.key}" },
+      {"kubernetes.io/cluster/eks-${var.env}-cluster" = "shared"},
+      {"Env" = var.env}
     )
   
 }
@@ -47,7 +53,9 @@ resource "aws_internet_gateway" "module-igw" {
     vpc_id = aws_vpc.module-vpc.id
     tags = merge(
       var.vpc_config.tags, 
-      {"Name" = var.env == "" ? "igw" : "eks-${var.env}-igw"}
+      {"Name" = var.env == "" ? "igw" : "eks-${var.env}-igw"},
+      {"kubernetes.io/cluster/eks-${var.env}-cluster" = "shared"},
+      {"Env" = var.env}
     )
   
 }
@@ -58,7 +66,9 @@ resource "aws_route_table" "public_route_table" {
     vpc_id = aws_vpc.module-vpc.id
     tags = merge(
       var.vpc_config.tags,
-      {"Name" = var.env == "" ? "routetable" : "eks-${var.env}-routetable"}
+      {"Name" = var.env == "" ? "routetable" : "eks-${var.env}-routetable"},
+      {"kubernetes.io/cluster/eks-${var.env}-cluster" = "shared"},
+      {"Env" = var.env}
     )
 
     route {

@@ -36,7 +36,7 @@ resource "aws_kms_key" "eks_key" {
 }
 
 resource "aws_kms_alias" "eks_alias" {
-  name          = "alias/${var.eks_cluster_name}-eks-key"
+  name          = "alias/${var.eks_cluster_name}-eks-key-v2"
   target_key_id = aws_kms_key.eks_key.id
 }
 
@@ -68,6 +68,17 @@ resource "aws_eks_cluster" "eks-cluster" {
 
     depends_on = [ aws_iam_role_policy_attachment.eks_cluster_policy ]
   
+}
+
+data "tls_certificate" "eks_certificate" {
+  count = var.enable_irsa ? 1 : 0
+  url = aws_eks_cluster.eks-cluster.identity[0].oidc[0].issuer
+}
+resource "aws_iam_openid_connect_provider" "eks_oidc_provider" {
+  count = var.enable_irsa ? 1 : 0
+  client_id_list = ["sts.amazonaws.com"]
+  thumbprint_list = [data.tls_certificate.eks_certificate[0].certificates[0].sha1_fingerprint]
+  url = aws_eks_cluster.eks-cluster.identity[0].oidc[0].issuer
 }
 
 data "aws_eks_cluster_auth" "eks-cluster" {  # Changed name to match your reference

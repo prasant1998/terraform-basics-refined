@@ -36,3 +36,9 @@ variable "tags" {
     }
   
 }
+
+variable "enable_irsa" {
+  description = "Enable IAM Role for Service Accounts"
+  type = bool
+  default = true
+}

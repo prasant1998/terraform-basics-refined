@@ -31,7 +31,7 @@ variable "tags" {
     type = map(string)
     default = {
       "Name" = "test"
-      "Env"  =  "dev"
+      "Env"  =  "env"
       "Owner" =  "DevOps"
     }
   

@@ -75,3 +75,8 @@ capacity_type = "ON_DEMAND"
 ami_type = "AL2_x86_64"
 env = "dev"
 
+# EKS Addons Variable Values
+
+enable_cluster_autoscaler = true
+oidc_provider_arn = "arn:aws:iam::123456789012:oidc-provider/oidc.eks.ap-northeast-2.amazonaws.com/id/12345678901234567890"
+

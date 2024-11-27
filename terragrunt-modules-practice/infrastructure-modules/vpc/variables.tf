@@ -35,9 +35,9 @@ variable "vpc_config" {
     } ]
     tags = {
       "Name" = "test-vpc"
-      "kubernetes.io/cluster/eks-dev-cluster" = "shared"
+      "kubernetes.io/cluster/eks-cluster" = "shared"
       "kubernetes.io/role/internal-elb" = 1
-      "env"  =  "dev"
+      "Env"  =  "env"
     }
   }
 }

@@ -22,3 +22,7 @@ output "cluster_token" {
   value = data.aws_eks_cluster_auth.eks-cluster.token
   sensitive = true
 }
+
+output "oidc_provider_arn" {
+  value = aws_iam_openid_connect_provider.eks_oidc_provider[0].arn
+}

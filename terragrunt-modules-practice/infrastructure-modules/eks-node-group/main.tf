@@ -62,7 +62,7 @@ resource "aws_launch_template" "eks_node_template" {
     instance_type = var.node_instance_type
 
     block_device_mappings {
-      device_name = "/dev/xvda"  
+      device_name = "/dev/xvda"
       ebs {
         volume_size =  var.node_volume_size
         volume_type = var.node_volume_type

@@ -140,3 +140,14 @@ variable "public_subnet_tags" {
 }
 
 
+# EKS Addons Variables
+
+variable "enable_cluster_autoscaler" {
+    description = "Enable Cluster Autoscaler"
+    type = bool
+}
+
+variable "oidc_provider_arn" {
+    description = "OIDC Provider ARN"
+    type = string
+}

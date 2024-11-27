@@ -96,7 +96,7 @@ Enhanced Terraform basics with practical examples and best practices to streamli
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
-│   │       
+│   │
 │   ├───depends-on_example
 │   │       main.tf
 │   │       provider.tf
@@ -106,7 +106,7 @@ Enhanced Terraform basics with practical examples and best practices to streamli
 │   │       main.tf
 │   │       provider.tf
 │   │       readme.md
-│   │
+│   │       
 │   └───lifecycle-example
 │           image.png
 │           main.tf
@@ -137,6 +137,10 @@ Enhanced Terraform basics with practical examples and best practices to streamli
 │   │       ├───eks
 │   │       │       main.tf
 │   │       │       outputs.tf
+│   │       │       variables.tf
+│   │       │
+│   │       ├───eks-addons
+│   │       │       main.tf
 │   │       │       variables.tf
 │   │       │
 │   │       ├───eks-node-group
@@ -239,21 +243,36 @@ Enhanced Terraform basics with practical examples and best practices to streamli
 │   │           readme.md
 │   │           terragrunt.hcl
 │   │
-│   └───infrastructure-modules
-│       ├───eks
-│       │       main.tf
-│       │       outputs.tf
-│       │       variables.tf
+│   ├───infrastructure-modules
+│   │   ├───eks
+│   │   │       main.tf
+│   │   │       outputs.tf
+│   │   │       variables.tf
+│   │   │
+│   │   ├───eks-node-group
+│   │   │       main.tf
+│   │   │       outputs.tf
+│   │   │       variables.tf
+│   │   │
+│   │   └───vpc
+│   │           main.tf
+│   │           outputs.tf
+│   │           variables.tf
+│   │
+│   └───stage
+│       │   env.hcl
 │       │
-│       ├───eks-node-group
-│       │       main.tf
-│       │       outputs.tf
-│       │       variables.tf
+│       ├───eks
+│       │       readme.md
+│       │       terragrunt.hcl
+│       │
+│       ├───nodegroup
+│       │       readme.md
+│       │       terragrunt.hcl
 │       │
 │       └───vpc
-│               main.tf
-│               outputs.tf
-│               variables.tf
+│               readme.md
+│               terragrunt.hcl
 │
 └───variables&outputs-examples
     ├───input-variables-examples

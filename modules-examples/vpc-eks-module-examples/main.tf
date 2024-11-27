@@ -34,3 +34,11 @@ module "node_group" {
     capacity_type = var.capacity_type
     ami_type = var.ami_type
 }
+
+module "eks_addons" {
+    source = "./modules/eks-addons"
+    enable_cluster_autoscaler = var.enable_cluster_autoscaler
+    env = var.env
+    eks_cluster_name = module.eks_cluster.eks_cluster_name
+    oidc_provider_arn = module.eks_cluster.oidc_provider_arn
+}
